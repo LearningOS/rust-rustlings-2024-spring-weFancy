@@ -34,9 +34,11 @@
 // Execute `rustlings hint tests7` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
-fn main() {}
+fn main() {
+    if let Ok(timestamp) = std::env::var("TEST_FOO") {
+        println!("cargo:TEST_FOO={}", timestamp);
+    }
+}
 
 #[cfg(test)]
 mod tests {
